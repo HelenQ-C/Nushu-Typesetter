@@ -1,34 +1,43 @@
-document.addEventListener('DOMContentLoaded', function() {
+function applyStyles(numCharacters) {
+    var styledText = document.getElementById('output');
+    styledText.className = 'styled-text'; 
+
+    if (numCharacters === 1) {
+        styledText.classList.add('one-character');
+    } else if (numCharacters === 2) {
+        styledText.classList.add('two-characters');
+    } else if (numCharacters === 3) {
+        styledText.classList.add('three-characters');
+    } else if (numCharacters === 4) {
+        styledText.classList.add('four-characters');
+    } else if (numCharacters === 5) {
+        styledText.classList.add('five-characters');
+    } else if (numCharacters === 6) {
+        styledText.classList.add('six-characters');
+    } else if (numCharacters === 7) {
+        styledText.classList.add('seven-characters');
+    } else if (numCharacters >= 22 && numCharacters <= 28) {
+        styledText.classList.add('twenty-eight-characters');
+    }
+}
+
+function generateStyledText() {
+    var inputText = document.getElementById('inputText').value;
     var outputDiv = document.getElementById('output');
-    var inputText = document.getElementById('inputText');
-    var generateButton = document.getElementById('generateButton');
+    inputText = inputText.replace(/[\u3002\uff1f\uff01\uff0c\u3001\uff1b\u201c\u201d\u300a\u300b\uff08\uff09\u3002\uff0c]/g, "");
+    outputDiv.innerHTML = '<p class="styled-text">' + inputText + '</p>';
 
-    generateButton.addEventListener('click', function() {
-        var text = inputText.value.trim(); // Get the trimmed input text
-        if (text) {
-            // Replace special characters with line breaks
-            text = text.replace(/[\u3002\uff1f\uff01\uff0c\u3001\uff1b\u201c\u201d\u300a\u300b\uff08\uff09\u3002\uff0c]/g, "");
-            
-            outputDiv.innerHTML = ''; // Clear the output grid
+    var regex = /(<([^>]+)>)/ig;
+    var cleanText = inputText.replace(regex, ''); 
+    var numCharacters = cleanText.length;
 
-            // Split the input text into individual characters
-            var characters = text.split('');
-            
-            // Create a grid item for each character
-            characters.forEach(function(character) {
-                var gridItem = document.createElement('div');
-                gridItem.textContent = character;
-                gridItem.classList.add('grid-item');
-                outputDiv.appendChild(gridItem);
-            });
-        } else {
-            alert('Please enter some text.');
-        }
-    });
-});
+    applyStyles(numCharacters);
+}
 
 $(document).ready(function(){
     $("#button").click(function(){
+        generateStyledText();
+
         var outContainer = document.getElementById('outcontainer');
         var width = outContainer.offsetWidth;
         var height = outContainer.offsetHeight;
