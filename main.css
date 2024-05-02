@@ -1,99 +1,38 @@
 @font-face { font-family: NyushuFengQi; src: url('Assets/NyushuFengQi-1.003.ttf'); } 
 @font-face { font-family: XinYuGongHeXieSong; src: url('Assets/XinYuGongHeXieSong-B2.ttf'); } 
+
+body{
+    overflow-y: hidden;
+}
+
 .styled-text {
-    height: 210mm;
+    height: 2480px;
     writing-mode: vertical-rl;
     text-orientation: upright;
     margin: 10px 0px 0px 9px;
     font-family: NyushuFengQi;
 }
 
-/* Style for 1 character */
-.styled-text.one-character {
-    position: relative;
-    left: -55px;
-    padding-top: 560px;
-    padding-left: -345px;
-    font-size: 500px;
-}
-
 /* Style for 2 characters */
 .styled-text.two-characters {
-    padding-top: 280px;
+    padding-top: 990px;
     position: relative;
-    left: -175px;
-    letter-spacing: 350px;
-    font-size: 250px;
-}
-
-/* Style for 3 characters */
-.styled-text.three-characters {
-    padding-top: 205px;
-    position: relative;
-    left: -220px;
-    letter-spacing: 230px;
-    font-size: 150px;
-}
-
-/* Style for 4 characters */
-.styled-text.four-characters {
-    padding-top: 150px;
-    position: relative;
-    left: -235px;
-    letter-spacing: 180px;
-    font-size: 110px;
-}
-
-/* Style for 5 characters */
-.styled-text.five-characters {
-    padding-top: 120px;
-    position: relative;
-    left: -245px;
-    letter-spacing: 145px;
-    font-size: 85px;
-}
-
-/* Style for 6 characters */
-.styled-text.six-characters {
-    padding-top: 105px;
-    position: relative;
-    left: -255px;
-    letter-spacing: 120px;
-    font-size: 75px;
-}
-
-/* Style for 7 characters */
-.styled-text.seven-characters {
-    padding-top: 100px;
-    position: relative;
-    left: -230px;
-    letter-spacing: 100px;
-    font-size: 60px;
-    line-height: 125px;
-}
-
-
-/* Style for 28 characters */
-.styled-text.twenty-eight-characters {
-    padding-top: 100px;
-    position: relative;
-    left: -45px;
-    letter-spacing: 100px;
-    font-size: 60px;
-    line-height: 125px;
+    left: -500px;
+    letter-spacing: 1100px;
+    font-size: 850px;
 }
 
 #outcontainer{
-    width: 148mm;
-    height: 210mm;
+    width: 1748px;
+    height: 2480px;
 }
 
 #border{
     position: relative;
     left: 0px;
-    width: 148mm;
-    height: 210mm;
-    border: 1.5px solid black;
+    width: 1748px;
+    height: 2480px;
+    border: 1px solid black;
 }
 
 .background {
@@ -111,15 +50,15 @@
     position: relative;
     left: 35px;
     top: 60px;
-    font-size: 130%;
+    font-size: 90%;
     color: #000000;
 }
 
 .textbut {
 
     position: relative;
-    width: 380px;
-    height: 50px;
+    width: 300px;
+    height: 40px;
     left: 35px;
     top: 100px;
     text-align: left;
@@ -128,10 +67,10 @@
     font-family: XinYuGongHeXieSong;
     font-style: normal;
     font-weight: 600;
-    font-size: 130%;
+    font-size: 90%;
 
     color: #000000;
-    border: #000000 1.5px solid;
+    border: #000000 1.3px solid;
 
 }
 
@@ -139,47 +78,50 @@
     box-sizing: border-box;
 
     position: relative;
-    width: 380px;
-    height: 345px;
+    width: 300px;
+    height: 312px;
     left: 35px;
     top: 98px;
 
     background: #FFFFFF;
-    border: 1.5px solid #000000;
+    border: 1.3px solid #000000;
 }
 
 #run {
     box-sizing: border-box;
 
     position: relative;
-    width: 130px;
-    height: 35px;
+    width: 110px;
+    height: 30px;
     left: 35px;
-    top: 135px;
+    top: 115px;
 
     background: linear-gradient(0deg, #F5F5F5 50%, #BF0000 482.76%);
     border: 1px solid #000000;
     font-family: XinYuGongHeXieSong;
-    font-size: 130%;
-    border: 1.5px solid #000000;
+    font-size: 90%;
+    border: 1.2px solid #000000;
 }
 
 #inputText {
-
     box-sizing: border-box;
-
     position: relative;
-    width: 353px;
+    width: 273px;
     height: 176px;
     left: 12px;
     top: 24px;
-    border: 1.5px solid #000000;
+    border: 1.3px solid #000000;
+    padding: 10px;
+    resize: none;
 }
 
 .outputcollection{
     position: absolute;
-    left: 500px;
-    top: 130px;
+    left: 400px;
+    top: 126px;
+    transform: scale(0.23); /* Shrink by 70% */
+    transform-origin: 0 0; /* Maintain top-left origin */
+    border: 1.2px solid #000000;
 }
 
 .inputname {
@@ -189,6 +131,28 @@
     font-family: XinYuGongHeXieSong;
     font-style: normal;
     font-weight: 600;
-    font-size: 130%;
+    font-size: 90%;
     color: #000000;
+}
+
+.note {
+position: relative;
+width: 280px;
+height: 60px;
+left: 13px;
+top: 30px;
+
+font-family: 'XinYuGongHeXieSong-B';
+font-style: normal;
+font-weight: 600;
+font-size: 7px;
+line-height: 10px;
+color: rgba(0, 0, 0, 0.5);
+}
+
+#button {
+    position: relative;
+    top: 293px;
+    left: 800px;
+    z-index: 1;
 }
