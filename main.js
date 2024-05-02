@@ -34,3 +34,20 @@ function generateStyledText() {
     applyStyles(longestSegmentLength, punctuations.length);
 }
 
+$(document).ready(function(){
+    $("#button").click(function(){
+        generateStyledText();
+
+        var outContainer = document.getElementById('outcontainer');
+        var width = outContainer.offsetWidth;
+        var height = outContainer.offsetHeight;
+        
+        domtoimage.toBlob(outContainer, {
+            width: width,
+            height: height
+        })
+        .then(function(blob){
+            window.saveAs(blob, "output.png");
+        });
+    });
+});

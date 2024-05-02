@@ -84,7 +84,7 @@ body{
 .style3-4column {
     padding-top: 660px;
     position: relative;
-    left: -85px;
+    left: -70px;
     letter-spacing: 750px;
     font-size: 480px;
     line-height: 405px;
@@ -123,6 +123,24 @@ body{
     letter-spacing: 580px;
     font-size: 410px;
     line-height: 522px;
+}
+
+.style4-4column {
+    padding-top: 505px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 580px;
+    font-size: 410px;
+    line-height: 392px;
+}
+
+.style4-5column {
+    padding-top: 505px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 580px;
+    font-size: 410px;
+    line-height: 313px;
 }
 
 /* Style for 5 characters */
@@ -233,6 +251,16 @@ body{
     font-size: 60px;
     font-size: 180px;
     line-height: 320px;
+}
+
+.style7-8column {
+    padding-top: 335px;
+    position: relative;
+    left: -80px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 200px;
 }
 
 /* Style for 8 characters */
