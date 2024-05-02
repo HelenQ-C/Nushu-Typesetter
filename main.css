@@ -163,7 +163,7 @@ body{
 .style5-2column {
     padding-top: 430px;
     position: relative;
-    left: -730px;
+    left: -560px;
     letter-spacing: 450px;
     font-size: 305px;
 }
@@ -301,7 +301,6 @@ body{
     left: 0px;
     width: 1748px;
     height: 2480px;
-    border: 1px solid black;
 }
 
 .background {
@@ -318,7 +317,7 @@ body{
     font-family: XinYuGongHeXieSong;
     position: relative;
     left: 35px;
-    top: 60px;
+    top: 50px;
     font-size: 90%;
     color: #000000;
 }
@@ -329,7 +328,7 @@ body{
     width: 300px;
     height: 40px;
     left: 35px;
-    top: 100px;
+    top: 80px;
     text-align: left;
     padding-left: 12px;
 
@@ -348,9 +347,9 @@ body{
 
     position: relative;
     width: 300px;
-    height: 312px;
+    height: 400px;
     left: 35px;
-    top: 98px;
+    top: 79px;
 
     background: #FFFFFF;
     border: 1.3px solid #000000;
@@ -362,8 +361,8 @@ body{
     position: relative;
     width: 110px;
     height: 30px;
-    left: -80px;
-    top: 115px;
+    left: 35px;
+    top: 95px;
 
     background: linear-gradient(0deg, #F5F5F5 50%, #BF0000 482.76%);
     border: 1px solid #000000;
@@ -387,10 +386,15 @@ body{
 .outputcollection{
     position: absolute;
     left: 400px;
-    top: 126px;
-    transform: scale(0.23); /* Shrink by 70% */
+    top: 105px;
+    transform: scale(0.1); /* Shrink by 70% */
     transform-origin: 0 0; /* Maintain top-left origin */
     border: 1.3px solid #000000;
+}
+
+.outputcollection.expanded{
+    transform: scale(0.23); /* Shrink by 70% */
+    transform-origin: 0 0; /* Maintain top-left origin */
 }
 
 .inputname {
@@ -406,22 +410,28 @@ body{
 
 .note {
 position: relative;
-width: 280px;
+width: 268px;
 height: 60px;
 left: 13px;
-top: 30px;
+top: 32px;
 
-font-family: 'XinYuGongHeXieSong-B';
+font-family: XinYuGongHeXieSong;
 font-style: normal;
 font-weight: 600;
-font-size: 7px;
-line-height: 10px;
+font-size: 10px;
+line-height: 14px;
 color: rgba(0, 0, 0, 0.5);
 }
 
 #button {
-    position: relative;
-    top: 293px;
-    left: 800px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 20%;
+    height: 6%;
+    font-size: 290%;
     z-index: 1;
+    font-family: XinYuGongHeXieSong;
+    border: 1.3px solid black;
 }
+

@@ -51,3 +51,30 @@ $(document).ready(function(){
         });
     });
 });
+
+$(document).ready(function(){
+    $('#button').hide();
+
+    $('.outputcollection').hover(
+        function() { // Mouse enter
+            $('#button').stop(true, true).fadeIn(600);
+        },
+        function() { // Mouse leave
+            $('#button').stop(true, true).fadeOut(600);
+        }
+    );
+});
+
+
+$(document).ready(function() {
+    // Toggle expansion on click
+    $('.outputcollection').click(function(event) {
+        $(this).toggleClass('expanded');
+        event.stopPropagation(); // Prevent click from bubbling up to document
+    });
+
+    // Click anywhere outside of .outputcollection to reduce it
+    $(document).click(function() {
+        $('.outputcollection').removeClass('expanded');
+    });
+});
