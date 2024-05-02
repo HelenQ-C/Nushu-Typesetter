@@ -16,6 +16,12 @@ function applyStyles(numCharacters) {
         styledText.classList.add('six-characters');
     } else if (numCharacters === 7) {
         styledText.classList.add('seven-characters');
+    } else if (numCharacters === 8) {
+        styledText.classList.add('eight-characters');
+    } else if (numCharacters === 9) {
+        styledText.classList.add('nine-characters');
+    } else if (numCharacters === 10) {
+        styledText.classList.add('ten-characters');
     } else if (numCharacters >= 22 && numCharacters <= 28) {
         styledText.classList.add('twenty-eight-characters');
     }
