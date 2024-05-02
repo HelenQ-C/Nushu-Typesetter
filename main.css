@@ -1,4 +1,5 @@
 @font-face { font-family: NyushuFengQi; src: url('Assets/NyushuFengQi-1.003.ttf'); } 
+@font-face { font-family: XinYuGongHeXieSong; src: url('Assets/XinYuGongHeXieSong-B2.ttf'); } 
 .styled-text {
     height: 210mm;
     writing-mode: vertical-rl;
@@ -92,10 +93,102 @@
     left: 0px;
     width: 148mm;
     height: 210mm;
-    border: 1px solid black;
+    border: 1.5px solid black;
 }
 
-#button {
+.background {
+    position: absolute;
+    width: 100%;
+    height: 107px;
+    left: 0px;
+    top: 0px;
+
+    background: linear-gradient(180deg, #BF0000 -45.33%, #FFFFFF 34.58%);
+}
+
+.title {
+    font-family: XinYuGongHeXieSong;
     position: relative;
-    z-index: 1;
+    left: 35px;
+    top: 60px;
+    font-size: 130%;
+    color: #000000;
+}
+
+.textbut {
+
+    position: relative;
+    width: 380px;
+    height: 50px;
+    left: 35px;
+    top: 100px;
+    text-align: left;
+    padding-left: 12px;
+
+    font-family: XinYuGongHeXieSong;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 130%;
+
+    color: #000000;
+    border: #000000 1.5px solid;
+
+}
+
+.inputoutbox {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 380px;
+    height: 345px;
+    left: 35px;
+    top: 98px;
+
+    background: #FFFFFF;
+    border: 1.5px solid #000000;
+}
+
+#run {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 130px;
+    height: 35px;
+    left: 35px;
+    top: 135px;
+
+    background: linear-gradient(0deg, #F5F5F5 50%, #BF0000 482.76%);
+    border: 1px solid #000000;
+    font-family: XinYuGongHeXieSong;
+    font-size: 130%;
+    border: 1.5px solid #000000;
+}
+
+#inputText {
+
+    box-sizing: border-box;
+
+    position: relative;
+    width: 353px;
+    height: 176px;
+    left: 12px;
+    top: 24px;
+    border: 1.5px solid #000000;
+}
+
+.outputcollection{
+    position: absolute;
+    left: 500px;
+    top: 130px;
+}
+
+.inputname {
+    position: relative;
+    left: 12px;
+    top: 12px;
+    font-family: XinYuGongHeXieSong;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 130%;
+    color: #000000;
 }
