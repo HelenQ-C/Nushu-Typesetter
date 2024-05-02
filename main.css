@@ -14,15 +14,31 @@ body{
 }
 
 /* Style for 1 character */
-.styled-text.one-character {
+.style1-0column {
     position: relative;
     left: -145px;
     padding-top: 1810px;
     font-size: 1600px;
 }
 
+.style1-1column {
+    position: relative;
+    left: -145px;
+    padding-top: 1810px;
+    font-size: 1600px;
+}
+
+.style1-2column {
+    position: relative;
+    left: -60px;
+    padding-top: 1710px;
+    font-size: 1300px;
+    letter-spacing: 3000px;
+    line-height: 800px;
+}
+
 /* Style for 2 characters */
-.styled-text.two-characters {
+.style2-0column {
     padding-top: 990px;
     position: relative;
     left: -500px;
@@ -31,16 +47,51 @@ body{
 }
 
 /* Style for 3 characters */
-.styled-text.three-characters {
-    padding-top: 670px;
+.style3-0column {
+    padding-top: 675px;
     position: relative;
     left: -630px;
     letter-spacing: 750px;
     font-size: 550px;
 }
 
+.style3-1column {
+    padding-top: 675px;
+    position: relative;
+    left: -620px;
+    letter-spacing: 750px;
+    font-size: 550px;
+}
+
+.style3-2column {
+    padding-top: 675px;
+    position: relative;
+    left: -90px;
+    letter-spacing: 750px;
+    font-size: 550px;
+    line-height: 800px;
+}
+
+.style3-3column {
+    padding-top: 675px;
+    position: relative;
+    left: -90px;
+    letter-spacing: 750px;
+    font-size: 550px;
+    line-height: 525px;
+}
+
+.style3-4column {
+    padding-top: 660px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 750px;
+    font-size: 480px;
+    line-height: 405px;
+}
+
 /* Style for 4 characters */
-.styled-text.four-characters {
+.style4-0column {
     padding-top: 505px;
     position: relative;
     left: -705px;
@@ -49,7 +100,23 @@ body{
 }
 
 /* Style for 5 characters */
-.styled-text.five-characters {
+.style5-0column {
+    padding-top: 430px;
+    position: relative;
+    left: -730px;
+    letter-spacing: 450px;
+    font-size: 305px;
+}
+
+.style5-1column {
+    padding-top: 430px;
+    position: relative;
+    left: -730px;
+    letter-spacing: 450px;
+    font-size: 305px;
+}
+
+.style5-2column {
     padding-top: 430px;
     position: relative;
     left: -730px;
@@ -58,7 +125,7 @@ body{
 }
 
 /* Style for 6 characters */
-.styled-text.six-characters {
+.style6-0column {
     padding-top: 370px;
     position: relative;
     left: -745px;
@@ -67,7 +134,7 @@ body{
 }
 
 /* Style for 7 characters */
-.styled-text.seven-characters {
+.style7-0column {
     padding-top: 320px;
     position: relative;
     left: -790px;
@@ -75,8 +142,75 @@ body{
     font-size: 180px;
 }
 
+.style7-1column {
+    padding-top: 320px;
+    position: relative;
+    left: -790px;
+    letter-spacing: 320px;
+    font-size: 180px;
+}
+
+.style7-2column {
+    padding-top: 335px;
+    position: relative;
+    left: -90px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 800px;
+}
+
+.style7-3column {
+    padding-top: 325px;
+    position: relative;
+    left: -65px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 540px;
+}
+
+.style7-4column {
+    padding-top: 335px;
+    position: relative;
+    left: -80px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 400px;
+}
+.style7-4column {
+    padding-top: 335px;
+    position: relative;
+    left: -80px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 400px;
+}
+
+.style7-4column {
+    padding-top: 335px;
+    position: relative;
+    left: -80px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 400px;
+}
+
+.style7-5column {
+    padding-top: 335px;
+    position: relative;
+    left: -80px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 320px;
+}
+
 /* Style for 8 characters */
-.styled-text.eight-characters {
+.style8-0column {
     padding-top: 290px;
     position: relative;
     left: -800px;
@@ -85,7 +219,7 @@ body{
 }
 
 /* Style for 9 characters */
-.styled-text.nine-characters {
+.style9-0column {
     padding-top: 260px;
     position: relative;
     left: -810px;
@@ -94,14 +228,13 @@ body{
 }
 
 /* Style for 10 characters */
-.styled-text.ten-characters {
+.style10-0column {
     padding-top: 250px;
     position: relative;
     left: -810px;
     letter-spacing: 225px;
     font-size: 120px;
 }
-
 
 
 #outcontainer{

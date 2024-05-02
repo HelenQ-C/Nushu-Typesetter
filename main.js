@@ -1,60 +1,36 @@
-function applyStyles(numCharacters) {
+function applyStyles(numCharacters, numPunctuations) {
     var styledText = document.getElementById('output');
-    styledText.className = 'styled-text'; 
+    styledText.className = '';  // Clear previous classes
+    styledText.classList.add('styled-text');
 
-    if (numCharacters === 1) {
-        styledText.classList.add('one-character');
-    } else if (numCharacters === 2) {
-        styledText.classList.add('two-characters');
-    } else if (numCharacters === 3) {
-        styledText.classList.add('three-characters');
-    } else if (numCharacters === 4) {
-        styledText.classList.add('four-characters');
-    } else if (numCharacters === 5) {
-        styledText.classList.add('five-characters');
-    } else if (numCharacters === 6) {
-        styledText.classList.add('six-characters');
-    } else if (numCharacters === 7) {
-        styledText.classList.add('seven-characters');
-    } else if (numCharacters === 8) {
-        styledText.classList.add('eight-characters');
-    } else if (numCharacters === 9) {
-        styledText.classList.add('nine-characters');
-    } else if (numCharacters === 10) {
-        styledText.classList.add('ten-characters');
-    } else if (numCharacters >= 22 && numCharacters <= 28) {
-        styledText.classList.add('twenty-eight-characters');
-    }
+    var className = `style${numCharacters}-${numPunctuations}column`;
+    console.log("Applying class: ", className);  // Diagnostic output
+    styledText.classList.add(className);
 }
 
 function generateStyledText() {
     var inputText = document.getElementById('inputText').value;
     var outputDiv = document.getElementById('output');
-    inputText = inputText.replace(/[\u3002\uff1f\uff01\uff0c\u3001\uff1b\u201c\u201d\u300a\u300b\uff08\uff09\u3002\uff0c]/g, "");
-    outputDiv.innerHTML = '<p class="styled-text">' + inputText + '</p>';
 
-    var regex = /(<([^>]+)>)/ig;
-    var cleanText = inputText.replace(regex, ''); 
-    var numCharacters = cleanText.length;
+    // Remove all spaces, tabs, and newline characters before processing
+    var cleanedInput = inputText.replace(/[\s]+/g, '');
 
-    applyStyles(numCharacters);
+    // Updated regex to include common Chinese punctuation
+    var punctuationRegex = /[\u3002\uff0c\u3001]/g
+
+    // Match punctuations for counting
+    var punctuations = cleanedInput.match(punctuationRegex) || [];
+
+    // Calculate the longest segment length between punctuations
+    var segments = cleanedInput.split(punctuationRegex);
+    var longestSegmentLength = segments.reduce((max, segment) => Math.max(max, segment.length), 0);
+
+    // Replace punctuations with a line break for display
+    var displayText = cleanedInput.replace(punctuationRegex, "<br>");
+
+    // Update the output HTML to include formatted text with line breaks after punctuation
+    outputDiv.innerHTML = '<p class="styled-text">' + displayText + '</p>';
+
+    applyStyles(longestSegmentLength, punctuations.length);
 }
-
-$(document).ready(function(){
-    $("#button").click(function(){
-        generateStyledText();
-
-        var outContainer = document.getElementById('outcontainer');
-        var width = outContainer.offsetWidth;
-        var height = outContainer.offsetHeight;
-        
-        domtoimage.toBlob(outContainer, {
-            width: width,
-            height: height
-        })
-        .then(function(blob){
-            window.saveAs(blob,"output.png")
-        })
-    })
-})
 
