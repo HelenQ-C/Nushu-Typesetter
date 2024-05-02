@@ -99,6 +99,32 @@ body{
     font-size: 410px;
 }
 
+.style4-1column {
+    padding-top: 505px;
+    position: relative;
+    left: -705px;
+    letter-spacing: 580px;
+    font-size: 410px;
+}
+
+.style4-2column {
+    padding-top: 505px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 580px;
+    font-size: 410px;
+    line-height: 800px;
+}
+
+.style4-3column {
+    padding-top: 505px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 580px;
+    font-size: 410px;
+    line-height: 522px;
+}
+
 /* Style for 5 characters */
 .style5-0column {
     padding-top: 430px;
