@@ -73,7 +73,6 @@ $(document).ready(function() {
         event.stopPropagation(); // Prevent click from bubbling up to document
     });
 
-    // Click anywhere outside of .outputcollection to reduce it
     $(document).click(function() {
         $('.outputcollection').removeClass('expanded');
     });
