@@ -11,31 +11,35 @@ function generateStyledText() {
 
     // Match punctuations for counting
     var punctuations = cleanedInput.match(punctuationRegex) || [];
-
-    // Check the number of punctuations
-    if (punctuations.length > 8) {
-        alert('The input must contain less than 8 sentences.');
-        return; // Stop the function if too many punctuations
-    }
-
     var segments = cleanedInput.split(punctuationRegex);
     var longestSegmentLength = segments.reduce((max, segment) => Math.max(max, segment.length), 0);
 
     // Replace punctuations with a line break for display
     var displayText = cleanedInput.replace(punctuationRegex, "<br>");
 
-    // Choose class based on typesetting option
-    var baseClass = isTraditional ? 'styled-text' : 'normal-text';
-    outputDiv.className = ''; // Clear previous classes
-    outputDiv.classList.add(baseClass); // Apply selected style class
-
     if (isTraditional) {
+        // Check if the number of punctuations exceeds the longest segment length + 1
+        if (punctuations.length > longestSegmentLength + 1) {
+            alert('For traditional style, the number of sentences must not exceed the longest segment of characters by more than one. Please fix your sentence.');
+            return; // Stop the function if condition not met
+        }
+        
         var className = `style${longestSegmentLength}-${punctuations.length}column`;
-        outputDiv.classList.add(className);
-    }
+        outputDiv.className = ''; // Clear previous classes
+        outputDiv.classList.add('styled-text', className); // Apply selected style class
 
-    // Update the output HTML
-    outputDiv.innerHTML = `<p class="${baseClass}">${displayText}</p>`;
+        // Update the output HTML
+        outputDiv.innerHTML = `<p class="styled-text">${displayText}</p>`;
+    } else {
+        // Check if the number of punctuations exceeds 8 for normal style
+        if (punctuations.length > 8) {
+            alert('For normal style, the number of sentences must not exceed 8. Please reduce the number of punctuations.');
+            return; // Stop the function if condition not met
+        }
+
+        outputDiv.className = 'normal-text'; // Clear previous classes and apply normal-text class
+        outputDiv.innerHTML = `<p class="normal-text">${displayText}</p>`; // Display cleaned input with line breaks for punctuations
+    }
 
     // Make the output collection visible
     $('.outputcollection').show();
