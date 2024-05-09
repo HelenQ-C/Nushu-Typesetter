@@ -20,7 +20,7 @@ function generateStyledText() {
     if (isTraditional) {
         // Check if the number of punctuations exceeds the longest segment length + 1
         if (punctuations.length > longestSegmentLength + 1) {
-            alert('For traditional style, the number of sentences must not exceed the longest segment of characters by more than one. Please fix your sentence.');
+            alert('The maximum punctuation break should be less than the number of the greatest character plus one.');
             return; // Stop the function if condition not met
         }
         
@@ -32,8 +32,8 @@ function generateStyledText() {
         outputDiv.innerHTML = `<p class="styled-text">${displayText}</p>`;
     } else {
         // Check if the number of punctuations exceeds 8 for normal style
-        if (punctuations.length > 8) {
-            alert('For normal style, the number of sentences must not exceed 8. Please reduce the number of punctuations.');
+        if (punctuations.length > 10) {
+            alert('The maximum punctuation break should be less than 10.');
             return; // Stop the function if condition not met
         }
 

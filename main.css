@@ -196,6 +196,24 @@ body{
     line-height: 400px;
 }
 
+.style5-5column {
+    padding-top: 430px;
+    position: relative;
+    left: -70px;
+    letter-spacing: 350px;
+    font-size: 305px;
+    line-height: 320px;
+}
+
+.style5-6column {
+    padding-top: 430px;
+    position: relative;
+    left: -70px;
+    letter-spacing: 350px;
+    font-size: 305px;
+    line-height: 270px;
+}
+
 .style5-8column {
     padding-top: 430px;
     position: relative;
@@ -207,6 +225,14 @@ body{
 
 /* Style for 6 characters */
 .style6-0column {
+    padding-top: 370px;
+    position: relative;
+    left: -745px;
+    letter-spacing: 375px;
+    font-size: 235px;
+}
+
+.style6-1column {
     padding-top: 370px;
     position: relative;
     left: -745px;
@@ -235,9 +261,37 @@ body{
 .style6-4column {
     padding-top: 370px;
     position: relative;
-    left: -745px;
+    left: -75px;
     letter-spacing: 375px;
     font-size: 235px;
+    line-height: 400px;
+}
+
+.style6-5column {
+    padding-top: 370px;
+    position: relative;
+    left: -75px;
+    letter-spacing: 375px;
+    font-size: 235px;
+    line-height: 320px;
+}
+
+.style6-6column {
+    padding-top: 370px;
+    position: relative;
+    left: -75px;
+    letter-spacing: 375px;
+    font-size: 235px;
+    line-height: 265px;
+}
+
+.style6-7column {
+    padding-top: 370px;
+    position: relative;
+    left: -75px;
+    letter-spacing: 375px;
+    font-size: 235px;
+    line-height: 227px;
 }
 
 /* Style for 7 characters */
@@ -326,6 +380,16 @@ body{
     line-height: 265px;
 }
 
+.style7-7column {
+    padding-top: 335px;
+    position: relative;
+    left: -80px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 230px;
+}
+
 .style7-8column {
     padding-top: 335px;
     position: relative;
@@ -345,8 +409,7 @@ body{
     font-size: 160px;
 }
 
-/* Style for 8 characters */
-.style8-4column {
+.style8-0column {
     padding-top: 290px;
     position: relative;
     left: -800px;
@@ -354,8 +417,161 @@ body{
     font-size: 160px;
 }
 
+.style8-2column {
+    padding-top: 290px;
+    position: relative;
+    left: -185px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 700px;
+}
+
+.style8-3column {
+    padding-top: 290px;
+    position: relative;
+    left: 5px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 600px;
+}
+
+.style8-5column {
+    padding-top: 290px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 320px;
+}
+
+.style8-6column {
+    padding-top: 290px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 268px;
+}
+
+.style8-7column {
+    padding-top: 290px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 227px;
+}
+
+.style8-8column {
+    padding-top: 290px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 200px;
+}
+
+.style8-9column {
+    padding-top: 290px;
+    position: relative;
+    left: -185px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 700px;
+}
+
+/* Style for 8 characters */
+.style8-4column {
+    padding-top: 290px;
+    position: relative;
+    left: -85px;
+    letter-spacing: 285px;
+    font-size: 160px;
+    line-height: 400px;
+}
+
 /* Style for 9 characters */
 .style9-0column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-1column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-2column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-3column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-4column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-5column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-6column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-7column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-8column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-9column {
+    padding-top: 260px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 255px;
+    font-size: 135px;
+}
+
+.style9-10column {
     padding-top: 260px;
     position: relative;
     left: -810px;
@@ -372,6 +588,92 @@ body{
     font-size: 120px;
 }
 
+.style10-1column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+.style10-2column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-3column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-4column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-5column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-6column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-7column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-8column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-9column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-10column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
+
+.style10-11column {
+    padding-top: 250px;
+    position: relative;
+    left: -810px;
+    letter-spacing: 225px;
+    font-size: 120px;
+}
 
 #outcontainer{
     width: 1748px;
@@ -588,12 +890,12 @@ input[type="radio"]:focus {
     margin: 10px 0px 0px 9px;
     font-family: NyushuFengQi;
     position: relative;
-    top:120px;
-    letter-spacing: 305px;
-    font-size: 150px;
+    top:80px;
+    letter-spacing: 245px;
+    font-size: 130px;
     padding-top: 65px;
-    line-height: 180px;
-    left: -80px;
+    line-height: 150px;
+    left: -70px;
 }
 
 .firstopt {
