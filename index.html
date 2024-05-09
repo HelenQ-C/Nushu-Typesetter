@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>女书字体排版Nushu Typesetter</title>
+        <title>女书字体排版 Nushu Typesetter</title>
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
         <div class="background"></div>
+        <div class="backgroundtext">女书</div>
         <div class="title">
             女书字体排版 (Nushu Typesetter) 
         </div>
@@ -23,11 +24,21 @@
                     If you are inputting Chinese characters, you may want to correct some characters in order to show it correct in Nushu.
                 </div>
             </div>
+            <button class="textbut02">基础 (Basic)</button>
+            <div class="basicbox">
+                <div class="typeset-options">
+                    <input type="radio" id="normal" name="typesetting" value="normal" checked>
+                    <label for="normal" class="firstopt">普通 (Normal)</label><br>
+                    <input type="radio" id="traditional" name="typesetting" value="traditional">
+                    <label for="traditional" class="secondopt">等宽 (Evenly Spaced)</label>
+                </div>
+            </div>
         </div>
         <div class="outputcollection">
                 <div id="outcontainer">
                     <div id="output" style="width: 100%; overflow: hidden;">
                     </div>
+                    <div class="outputbackground"></div>
                 </div>
             <button id="button">下载(Download)</button>
         </div>

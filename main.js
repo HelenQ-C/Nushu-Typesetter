@@ -1,58 +1,65 @@
-function applyStyles(numCharacters, numPunctuations) {
-    var styledText = document.getElementById('output');
-    styledText.className = '';  // Clear previous classes
-    styledText.classList.add('styled-text');
-
-    var className = `style${numCharacters}-${numPunctuations}column`;
-    console.log("Applying class: ", className);  // Diagnostic output
-    styledText.classList.add(className);
-}
-
 function generateStyledText() {
     var inputText = document.getElementById('inputText').value;
     var outputDiv = document.getElementById('output');
+    var isTraditional = document.getElementById('traditional').checked;
 
     // Remove all spaces, tabs, and newline characters before processing
     var cleanedInput = inputText.replace(/[\s]+/g, '');
 
     // Updated regex to include common Chinese punctuation
-    var punctuationRegex = /[\u3002\uff0c\u3001]/g
+    var punctuationRegex = /[\u3002\uff0c\u3001]/g;
 
     // Match punctuations for counting
     var punctuations = cleanedInput.match(punctuationRegex) || [];
 
-    // Calculate the longest segment length between punctuations
+    // Check the number of punctuations
+    if (punctuations.length > 8) {
+        alert('The input must contain less than 8 sentences.');
+        return; // Stop the function if too many punctuations
+    }
+
     var segments = cleanedInput.split(punctuationRegex);
     var longestSegmentLength = segments.reduce((max, segment) => Math.max(max, segment.length), 0);
 
     // Replace punctuations with a line break for display
     var displayText = cleanedInput.replace(punctuationRegex, "<br>");
 
-    // Update the output HTML to include formatted text with line breaks after punctuation
-    outputDiv.innerHTML = '<p class="styled-text">' + displayText + '</p>';
+    // Choose class based on typesetting option
+    var baseClass = isTraditional ? 'styled-text' : 'normal-text';
+    outputDiv.className = ''; // Clear previous classes
+    outputDiv.classList.add(baseClass); // Apply selected style class
 
-    applyStyles(longestSegmentLength, punctuations.length);
+    if (isTraditional) {
+        var className = `style${longestSegmentLength}-${punctuations.length}column`;
+        outputDiv.classList.add(className);
+    }
+
+    // Update the output HTML
+    outputDiv.innerHTML = `<p class="${baseClass}">${displayText}</p>`;
+
+    // Make the output collection visible
+    $('.outputcollection').show();
+
+    // Hide the background text
+    $('.backgroundtext').css('display', 'none');
 }
 
 $(document).ready(function(){
-    $("#button").click(function(){
-        generateStyledText();
+    $("#run").click(generateStyledText);  // Bind the Run button to the generate function
 
+    $("#button").click(function(){
         var outContainer = document.getElementById('outcontainer');
         var width = outContainer.offsetWidth;
         var height = outContainer.offsetHeight;
-        
+
         domtoimage.toBlob(outContainer, {
             width: width,
             height: height
-        })
-        .then(function(blob){
-            window.saveAs(blob, "output.png");
+        }).then(function(blob){
+            window.saveAs(blob, "NushuOutput.png");
         });
     });
-});
 
-$(document).ready(function(){
     $('#button').hide();
 
     $('.outputcollection').hover(
@@ -63,17 +70,4 @@ $(document).ready(function(){
             $('#button').stop(true, true).fadeOut(600);
         }
     );
-});
-
-
-$(document).ready(function() {
-    // Toggle expansion on click
-    $('.outputcollection').click(function(event) {
-        $(this).toggleClass('expanded');
-        event.stopPropagation(); // Prevent click from bubbling up to document
-    });
-
-    $(document).click(function() {
-        $('.outputcollection').removeClass('expanded');
-    });
 });

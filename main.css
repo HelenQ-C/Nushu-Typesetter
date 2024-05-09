@@ -2,7 +2,8 @@
 @font-face { font-family: XinYuGongHeXieSong; src: url('Assets/XinYuGongHeXieSong-B2.ttf'); } 
 
 body{
-    overflow-y: hidden;
+    height: 770px;
+    overflow-x: hidden;
 }
 
 .styled-text {
@@ -44,6 +45,15 @@ body{
     left: -500px;
     letter-spacing: 1100px;
     font-size: 850px;
+}
+
+.style2-2column {
+    padding-top: 990px;
+    position: relative;
+    left: -285px;
+    letter-spacing: 1100px;
+    font-size: 850px;
+    line-height: 600px;
 }
 
 /* Style for 3 characters */
@@ -168,8 +178,61 @@ body{
     font-size: 305px;
 }
 
+.style5-3column {
+    padding-top: 430px;
+    position: relative;
+    left: -140px;
+    letter-spacing: 450px;
+    font-size: 305px;
+    line-height: 500px;
+}
+
+.style5-4column {
+    padding-top: 430px;
+    position: relative;
+    left: -70px;
+    letter-spacing: 450px;
+    font-size: 305px;
+    line-height: 400px;
+}
+
+.style5-8column {
+    padding-top: 430px;
+    position: relative;
+    left: -560px;
+    letter-spacing: 450px;
+    font-size: 305px;
+}
+
+
 /* Style for 6 characters */
 .style6-0column {
+    padding-top: 370px;
+    position: relative;
+    left: -745px;
+    letter-spacing: 375px;
+    font-size: 235px;
+}
+
+.style6-2column {
+    padding-top: 370px;
+    position: relative;
+    left: -240px;
+    letter-spacing: 375px;
+    font-size: 235px;
+    line-height: 650px;
+}
+
+.style6-3column {
+    padding-top: 370px;
+    position: relative;
+    left: -160px;
+    letter-spacing: 375px;
+    font-size: 235px;
+    line-height: 480px;
+}
+
+.style6-4column {
     padding-top: 370px;
     position: relative;
     left: -745px;
@@ -253,6 +316,16 @@ body{
     line-height: 320px;
 }
 
+.style7-6column {
+    padding-top: 335px;
+    position: relative;
+    left: -80px;
+    letter-spacing: 320px;
+    font-size: 60px;
+    font-size: 180px;
+    line-height: 265px;
+}
+
 .style7-8column {
     padding-top: 335px;
     position: relative;
@@ -265,6 +338,15 @@ body{
 
 /* Style for 8 characters */
 .style8-0column {
+    padding-top: 290px;
+    position: relative;
+    left: -800px;
+    letter-spacing: 285px;
+    font-size: 160px;
+}
+
+/* Style for 8 characters */
+.style8-4column {
     padding-top: 290px;
     position: relative;
     left: -800px;
@@ -294,6 +376,8 @@ body{
 #outcontainer{
     width: 1748px;
     height: 2480px;
+    background-color: #fff;
+
 }
 
 #border{
@@ -347,7 +431,7 @@ body{
 
     position: relative;
     width: 300px;
-    height: 400px;
+    height: 420px;
     left: 35px;
     top: 79px;
 
@@ -384,12 +468,13 @@ body{
 }
 
 .outputcollection{
-    position: absolute;
-    left: 400px;
+    position:fixed;
+    left: 45%;
     top: 105px;
-    transform: scale(0.1); /* Shrink by 70% */
+    transform: scale(0.23); /* Shrink by 70% */
     transform-origin: 0 0; /* Maintain top-left origin */
     border: 1.3px solid #000000;
+    display: none;
 }
 
 .outputcollection.expanded{
@@ -418,8 +503,8 @@ top: 32px;
 font-family: XinYuGongHeXieSong;
 font-style: normal;
 font-weight: 600;
-font-size: 10px;
-line-height: 14px;
+font-size: 11px;
+line-height: 16px;
 color: rgba(0, 0, 0, 0.5);
 }
 
@@ -435,3 +520,128 @@ color: rgba(0, 0, 0, 0.5);
     border: 1.3px solid black;
 }
 
+.textbut02 {
+
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 35px;
+    top: 78px;
+    text-align: left;
+    padding-left: 12px;
+
+    font-family: XinYuGongHeXieSong;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+
+    color: #000000;
+    border: #000000 1.3px solid;
+
+}
+
+.basicbox {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 300px;
+    height: 80px;
+    left: 35px;
+    top: 77px;
+    padding: 15px;
+
+    background: #FFFFFF;
+    border: 1.3px solid #000000;
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff; /* White background by default */
+    margin: 0;
+    color: currentColor;
+    width: 1.00em;  /* Example size, adjust as needed */
+    height: 1.00em; /* Example size, adjust as needed */
+    border: 0.10em solid currentColor; /* Solid border */
+    border-radius: 0%; /* Circle shape */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+input[type="radio"]:checked {
+    background-color: black; /* Black background when checked */
+}
+
+input[type="radio"]:focus {
+    outline: none; /* Removes the default focus outline */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow on focus */
+}
+
+.normal-text{
+    height: 2480px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 10px 0px 0px 9px;
+    font-family: NyushuFengQi;
+    position: relative;
+    top:120px;
+    letter-spacing: 305px;
+    font-size: 150px;
+    padding-top: 65px;
+    line-height: 180px;
+    left: -80px;
+}
+
+.firstopt {
+    padding-left: 3px;;
+    padding-right: 10px;
+    text-decoration: underline;;
+}
+
+.firstopt:hover::after {
+    content: '';
+    position: absolute;
+    width: 87px;
+    height: 124px;
+    background-image: url('Assets/nyushu1.png'); /* Path to your image */
+    background-size: cover; /* Cover the area of the pseudo-element */
+    left: 60%; /* Position the image to the right of the element */
+    top: 0; /* Align it to the top of the element */
+    background-color: #fff;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.secondopt {
+    padding-left: 3px;;
+    text-decoration: underline;;
+}
+
+.secondopt:hover::after {
+    content: '';
+    position: absolute;
+    width: 87px;
+    height: 124px;
+    background-image: url('Assets/nyushu2.png'); /* Path to your image */
+    background-size: cover; /* Cover the area of the pseudo-element */
+    left: 60%; /* Position the image to the right of the element */
+    top: 0; /* Align it to the top of the element */
+    background-color: #fff;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.backgroundtext {
+    top:13%;
+    position: absolute;
+    left: 45%;
+    letter-spacing: 600px;
+    font-size: 200px;
+    line-height: 300px;
+    font-family: NyushuFengQi;
+    opacity: 0.2;
+}
