@@ -31,7 +31,7 @@ function generateStyledText() {
         // Update the output HTML
         outputDiv.innerHTML = `<p class="styled-text">${displayText}</p>`;
     } else {
-        // Check if the number of punctuations exceeds 8 for normal style
+        // Check if the number of punctuations exceeds 10 for normal style
         if (punctuations.length > 10) {
             alert('The maximum punctuation break should be less than 10.');
             return; // Stop the function if condition not met
@@ -74,4 +74,32 @@ $(document).ready(function(){
             $('#button').stop(true, true).fadeOut(600);
         }
     );
+
+    const aboutButtons = document.getElementsByClassName("about"); 
+    const aboutTexts = document.getElementsByClassName("aboutpage");
+
+    for (let i = 0; i < aboutTexts.length; i++) {
+        aboutTexts[i].style.display = "none";
+    }
+
+    for (let i = 0; i < aboutButtons.length; i++) {
+        aboutButtons[i].addEventListener("click", function(event) {
+            event.stopPropagation();
+            for (let j = 0; j < aboutTexts.length; j++) {
+                if (aboutTexts[j].style.display === "none") {
+                    aboutTexts[j].style.display = "block";
+                } else {
+                    aboutTexts[j].style.display = "none";
+                }
+            }
+        });
+    }
+
+    document.addEventListener("click", function(event) {
+        for (let i = 0; i < aboutTexts.length; i++) {
+            if (!aboutTexts[i].contains(event.target)) {
+                aboutTexts[i].style.display = "none";
+            }
+        }
+    });
 });
