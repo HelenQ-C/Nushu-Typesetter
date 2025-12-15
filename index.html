@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.11/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <div class="background"></div>
+  <div class="backgroundtext">女书</div>
+  
+  <div class="title">
+      女书字体排版 (Nushu Typesetter) 
+  </div>
+  
+  <div class="countainer">
+      <div class="about">
+          [ 关于 (About) ]
+      </div>
+  </div>
+  
+  <div class="manual">
+      <button class="textbut">文字 (Text)</button>
+      <div class="inputoutbox">
+          <div class="inputname">输入文字 (Input Text)：</div>
+          <textarea id="inputText" placeholder="输入简中或女书文字..."></textarea>
+          <div class="note">
+              注（Note）: <br>
+              你可以输入简体中文或者直接输入女书文字。<br>
+              如果你使用简体中文输入，你可能需要更改一些文字才会显示成女书。<br>
+              请注意标点符号的运用，如果排版出现问题请检查标点符号是否正确。<br>
+              You can input Chinese characters or directly type in Nushu characters.<br>
+              If you are inputting Chinese characters, you may want to correct some characters in order to show it correctly in Nushu.
+          </div>
+      </div>
+      
+      <button class="textbut02">基础 (Basic)</button>
+      <div class="basicbox">
+          <div class="typeset-options">
+              <input type="radio" id="normal" name="typesetting" value="normal" checked>
+              <label for="normal" class="firstopt">普通 (Normal)</label><br>
+              <input type="radio" id="traditional" name="typesetting" value="traditional">
+              <label for="traditional" class="secondopt">等宽 (Evenly Spaced)</label>
+          </div>
+      </div>
+  </div>
+  
+  <div class="outputcollection" style="display: none;">
+      <div id="outcontainer">
+          <div id="layout-output">
+          </div>
+          <div class="outputbackground"></div>
+      </div>
+      <div class="download-buttons">
+      <button id="button-png" onclick="downloadPNG()">
+        下载PNG
+        <br>
+        (Download PNG)
+      </button>
+      <button id="button-pdf" onclick="downloadPDF()">
+        下载PDF
+        <br>
+        (Download PDF)</button>
+      </div>
+  </div>
+  
+  <button onclick="generateStyledText()" id="run">运行(Run)</button>
+  
+  <div class="aboutpage">
+      <div class="abouttext">
+          女书，意为女性的文字，是一种受汉字影响的音节文字。它仅被湖南省江永县的瑶族女性使用。文化大革命中断了女书的语言和书写，加上时代的发展和人口的流失，女书现在即将濒临失传。女性曾经使用女书来书写信件和诗歌等表达对父权社会的不满，以及增强女性之间的联系和沟通。
+          <br><br>
+          <em>"女书字体排版"</em> 是一个专为女书设计的网页排版工具，希望能让对女书感兴趣的人能轻松使用这个字体排版工具来排版女书相关文档。
+          <br><br>
+          此工具运用了女书凤栖字体，在此感谢MY1L制作的字体。关于这款字体的详情可以看这里：https://github.com/nushu-script/Nyushu 
+          <br><br>
+          Nushu, also known as "women's script," is a syllabic script derived from Chinese characters. It was uniquely used by the ethnic Yao women in Jiangyong County, Hunan Province. However, the Cultural Revolution severely disrupted the usage of Nushu. Coupled with modern advancements and population shifts, this script is now at risk of vanishing. In the past, women used the Nushu language to express dissatisfaction with patriarchal society and to build bonds between women. They wrote letters, poems, and songs to communicate their ideas to the women's community. 
+          <br><br>
+          <em>Nushu Typesetter</em>, aims to create a typesetting tool solely designed for the Nushu Language. The project intends to help people interested in this language easily typeset the language and use it in prints. 
+          <br><br>
+          The typeface Nyushu Fengqi is used to create the outputs. Thanks to MY1L (綿飴) for creating this beautiful typeface. Detailed information can be viewed here: https://github.com/nushu-script/Nyushu 
+      </div>
+  </div>
+</body>
+<script src="sketch.js"></script>
+</html>

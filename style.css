@@ -1,0 +1,322 @@
+@font-face { font-family: NyushuFengQi; src: url('Assets/NyushuFengQi-1.003.ttf'); } 
+@font-face { font-family: XinYuGongHeXieSong; src: url('Assets/XinYuGongHeXieSong-B2.ttf'); } 
+
+body {
+    height: 770px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#outcontainer {
+    width: 1748px;
+    height: 2480px;
+    background-color: #fff;
+    position: relative;
+    border: 1px solid black;
+}
+
+#output {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#output canvas {
+    display: block;
+}
+
+.outputcollection {
+    position: fixed;
+    left: 45%;
+    top: 105px;
+    transform: scale(0.23); 
+    transform-origin: 0 0; 
+    border: 1.3px solid #000000;
+    display: none;
+}
+
+.outputcollection.expanded {
+    transform: scale(0.23);
+    transform-origin: 0 0; 
+}
+
+/* UI Elements */
+.background {
+    position: absolute;
+    width: 100%;
+    height: 107px;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, #BF0000 -45.33%, #FFFFFF 34.58%);
+}
+
+.title {
+    cursor: default;
+    font-family: XinYuGongHeXieSong;
+    position: relative;
+    left: 35px;
+    top: 50px;
+    font-size: 90%;
+    color: #000000;
+}
+
+.countainer {
+    width: 100%;
+}
+
+.about {
+    font-family: XinYuGongHeXieSong;
+    position: absolute;
+    right: 40px;
+    top: 58px;
+    font-size: 90%;
+    color: #000000;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.about:hover {
+    opacity: 100%;
+}
+
+.textbut {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 35px;
+    top: 70px;
+    text-align: left;
+    padding-left: 12px;
+    font-family: XinYuGongHeXieSong;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+    color: #000000;
+    border: #000000 1.3px solid;
+    background: white;
+}
+
+.inputoutbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 420px;
+    left: 35px;
+    top: 69px;
+    background: #FFFFFF;
+    border: 1.3px solid #000000;
+}
+
+#run {
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    width: 110px;
+    height: 30px;
+    left: 35px;
+    top: 80px;
+    background: linear-gradient(0deg, #F5F5F5 50%, #BF0000 482.76%);
+    border: 1px solid #000000;
+    font-family: XinYuGongHeXieSong;
+    font-size: 90%;
+    border: 1.3px solid #000000;
+}
+
+#inputText {
+    box-sizing: border-box;
+    position: relative;
+    width: 273px;
+    height: 176px;
+    left: 12px;
+    top: 24px;
+    border: 1.3px solid #000000;
+    padding: 10px;
+    resize: none;
+    font-family: XinYuGongHeXieSong;
+    line-height: 18px;
+    font-weight: regular;
+}
+
+.inputname {
+    position: relative;
+    left: 12px;
+    top: 12px;
+    font-family: XinYuGongHeXieSong;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+    color: #000000;
+}
+
+.note {
+    position: relative;
+    width: 268px;
+    height: 60px;
+    left: 13px;
+    top: 32px;
+    font-family: XinYuGongHeXieSong;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#button-png {
+    cursor: pointer;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 20%;
+    height: 6%;
+    font-size: 240%;
+    z-index: 1;
+    font-family: XinYuGongHeXieSong;
+    border: 1.3px solid black;
+    background: white;
+}
+
+#button-pdf {
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  left: 450px;
+  width: 20%;
+  height: 6%;
+  font-size: 240%;
+  z-index: 1;
+  font-family: XinYuGongHeXieSong;
+  border: 1.3px solid black;
+  background: white;
+}
+
+.textbut02 {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 35px;
+    top: 68px;
+    text-align: left;
+    padding-left: 12px;
+    font-family: XinYuGongHeXieSong;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+    color: #000000;
+    border: #000000 1.3px solid;
+    background: white;
+}
+
+.basicbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 300px;
+    height: 80px;
+    left: 35px;
+    top: 67px;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1.3px solid #000000;
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+input[type="radio"] {
+    appearance: none;
+    background-color: #fff; 
+    margin: 0;
+    color: currentColor;
+    width: 1.00em;  
+    height: 1.00em; 
+    border: 0.10em solid currentColor; 
+    border-radius: 0%; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+input[type="radio"]:checked {
+    background-color: black; 
+}
+
+input[type="radio"]:focus {
+    outline: none; 
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); 
+}
+
+.firstopt {
+    cursor: pointer;
+    padding-left: 3px;
+    padding-right: 10px;
+    text-decoration: underline;
+}
+
+.firstopt:hover::after {
+    content: '';
+    position: absolute;
+    width: 87px;
+    height: 124px;
+    background-image: url('Assets/nyushu1.png'); 
+    background-size: cover; 
+    left: 60%; 
+    top: 0; 
+    background-color: #fff;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.secondopt {
+    cursor: pointer;
+    padding-left: 3px;
+    text-decoration: underline;
+}
+
+.secondopt:hover::after {
+    content: '';
+    position: absolute;
+    width: 87px;
+    height: 124px;
+    background-image: url('Assets/nyushu2.png'); 
+    background-size: cover; 
+    left: 60%; 
+    top: 0; 
+    background-color: #fff;
+    border: 1px solid black;
+    z-index: 1;
+}
+
+.backgroundtext {
+    cursor: default;
+    top: 13%;
+    position: absolute;
+    left: 45%;
+    letter-spacing: 600px;
+    font-size: 200px;
+    line-height: 300px;
+    font-family: NyushuFengQi;
+    opacity: 0.2;
+}
+
+.aboutpage {
+    cursor: default;
+    overflow-y: auto;
+    position: absolute;
+    width: 300px;
+    height: 80%;
+    right: 40px;
+    top: 105px;
+    border: 1px solid #000000;
+    background: #FFFFFF;
+    display: none;
+}
+
+.abouttext {
+    margin: 15px;
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+}
+
